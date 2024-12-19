@@ -10,9 +10,6 @@ Loyihada quyidagi texnologiyalardan foydalanilgan:
 - **Aiogram**: Telegram bot yaratish uchun asinxron kutubxona.
 - **PostgreSQL**: Ma’lumotlarni saqlash uchun ishonchli va tezkor ma’lumotlar bazasi.
 - **Psycopg2**: Python uchun PostgreSQL bilan ishlash kutubxonasi.
-- **Docker**: Loyihani konteynerizatsiya qilish uchun.
-- **SQLAlchemy**: Ma’lumotlar bazasi bilan ishlashni qulaylashtirish uchun ORM kutubxonasi.
-- **Redis**: Bot sessiyalarini boshqarish uchun kechiktirilgan ma’lumotlar bazasi.
 
 ## Xususiyatlar
 
@@ -29,7 +26,6 @@ Loyihani ishga tushirishdan oldin quyidagilarni o‘rnating:
 
 - **Python 3.9 yoki undan yuqori**
 - **PostgreSQL**
-- **Docker** (ixtiyoriy, lekin tavsiya etiladi)
 
 ### O‘rnatish
 
@@ -53,24 +49,4 @@ Loyihani ishga tushirishdan oldin quyidagilarni o‘rnating:
     ```env
     BOT_TOKEN=your_telegram_bot_token
     DATABASE_URL=postgresql://user:password@localhost:5432/database_name
-    REDIS_URL=redis://localhost:6379
     ```
-
-4. Ma’lumotlar bazasini sozlang:
-
-    ```bash
-    alembic upgrade head
-    ```
-
-5. Botni ishga tushiring:
-
-    ```bash
-    python bot.py
-    ```
-
-### Docker orqali ishga tushirish
-
-Docker Compose yordamida loyihani ishga tushiring:
-
-```bash
-docker-compose up --build
